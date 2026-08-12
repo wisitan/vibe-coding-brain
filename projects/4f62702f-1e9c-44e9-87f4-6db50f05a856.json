@@ -1,0 +1,26 @@
+{
+  "id":  "4f62702f-1e9c-44e9-87f4-6db50f05a856",
+  "name":  "Affiliate_Automation",
+  "projectResources":  {
+    "resources":  [
+      {
+        "folderUri":  "file:///e%3A/OneDrive/Projects/Affiliate_Automation"
+      }
+    ]
+  },
+  "permissionGrants":  {
+    "permissionGrants":  {
+      "allow":  [
+        "command(cd)",
+        "write_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/.gemini/antigravity/brain/54de0ec6-1cb9-4e87-aa1c-e95f235ea8fb/task.md)"
+      ]
+    }
+  },
+  "settings":  {
+    "fileAccessPolicy":  "AGENT_SETTING_POLICY_ASK",
+    "internetPolicy":  "AGENT_SETTING_POLICY_ASK",
+    "autoExecutionPolicy":  "CASCADE_COMMANDS_AUTO_EXECUTION_OFF",
+    "artifactReviewMode":  "ARTIFACT_REVIEW_MODE_ALWAYS"
+  },
+  "updatedAt":  "2026-08-09T06:55:10.116502Z"
+}

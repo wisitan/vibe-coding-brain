@@ -1,0 +1,18 @@
+{
+  "id": "d55049e8-05da-4100-a936-4c33c5528cb1",
+  "name": "Business Metadata",
+  "projectResources": {
+    "resources": [
+      {
+        "folderUri": "file:///Users/a_am_i/Library/CloudStorage/OneDrive-Personal/Projects/Business%20Metadata"
+      }
+    ]
+  },
+  "settings": {
+    "fileAccessPolicy": "AGENT_SETTING_POLICY_ASK",
+    "internetPolicy": "AGENT_SETTING_POLICY_ASK",
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_OFF",
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_ALWAYS"
+  },
+  "updatedAt": "2026-07-03T07:13:01.108055Z"
+}

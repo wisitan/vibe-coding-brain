@@ -1,0 +1,23 @@
+{
+  "userSettings": {
+    "browserJsExecutionPolicy": "BROWSER_JS_EXECUTION_POLICY_TURBO",
+    "globalPermissionGrants": {
+      "allow": [
+        "command(Test-Path)",
+        "command(Start-Process)",
+        "command(Get-Process)",
+        "command(Get-Content)",
+        "command(\u0026)",
+        "command(Get-ItemProperty)",
+        "command(cmd.exe)",
+        "command(attrib)",
+        "command(Copy-Item)",
+        "command(Get-Item)",
+        "command([System.Diagnostics.Process]::GetCurrentProcess().SessionId)",
+        "command(Get-Volume)",
+        "command(Stop-Process)",
+        "command(git status)"
+      ]
+    }
+  }
+}

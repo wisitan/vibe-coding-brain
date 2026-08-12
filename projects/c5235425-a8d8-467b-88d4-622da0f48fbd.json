@@ -1,0 +1,36 @@
+{
+  "id": "c5235425-a8d8-467b-88d4-622da0f48fbd",
+  "name": "YouTube_Content_Creator",
+  "projectResources": {
+    "resources": [
+      {
+        "folderUri": "file:///Users/a_am_i/Library/CloudStorage/OneDrive-Personal/Projects/YouTube_Content_Creator"
+      }
+    ]
+  },
+  "permissionGrants": {
+    "permissionGrants": {
+      "allow": [
+        "command(find)",
+        "command(grep)",
+        "read_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/Projects/poonsin steak)",
+        "read_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/Projects)",
+        "read_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/Poonsin Steak)",
+        "command(head)",
+        "write_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/.gemini/antigravity/brain/6077ba76-cdbc-4598-aae1-af1de7da1f87/implementation_plan.md)",
+        "command(mkdir)",
+        "read_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/.gemini/config/plugins/modern-web-guidance-plugin/skills/modern-web-guidance/SKILL.md)",
+        "command(npx)",
+        "command(git status)",
+        "write_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/.gemini/antigravity/brain/6077ba76-cdbc-4598-aae1-af1de7da1f87/task.md)"
+      ]
+    }
+  },
+  "settings": {
+    "fileAccessPolicy": "AGENT_SETTING_POLICY_ASK",
+    "internetPolicy": "AGENT_SETTING_POLICY_ASK",
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_OFF",
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_ALWAYS"
+  },
+  "updatedAt": "2026-06-03T08:46:13.087918Z"
+}

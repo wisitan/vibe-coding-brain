@@ -1,0 +1,25 @@
+{
+  "id": "d7d97547-8465-4942-814a-1859d53a76eb",
+  "name": "Youtube Short Faceless Channel",
+  "projectResources": {
+    "resources": [
+      {
+        "folderUri": "file:///e%3A/OneDrive/Projects/Youtube%20Short%20Faceless%20Channel"
+      }
+    ]
+  },
+  "permissionGrants": {
+    "permissionGrants": {
+      "allow": [
+        "command(powershell)"
+      ]
+    }
+  },
+  "settings": {
+    "fileAccessPolicy": "AGENT_SETTING_POLICY_ALLOW",
+    "internetPolicy": "AGENT_SETTING_POLICY_ASK",
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_OFF",
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_ALWAYS"
+  },
+  "updatedAt": "2026-08-05T04:24:07.332042Z"
+}

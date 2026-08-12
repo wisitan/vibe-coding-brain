@@ -1,0 +1,26 @@
+{
+  "id": "bd5fdf42-ec77-4b7a-8caf-7a71256886a3",
+  "name": "Digital_Product_Automation",
+  "projectResources": {
+    "resources": [
+      {
+        "folderUri": "file:///e%3A/OneDrive/Projects/Digital_Product_Automation"
+      }
+    ]
+  },
+  "permissionGrants": {
+    "permissionGrants": {
+      "allow": [
+        "read_file(E:\\OneDrive\\.gemini\\antigravity\\brain\\0d1f5f7f-6716-4fd0-93c6-a85abf1e344a\\implementation_plan.md)",
+        "write_file(E:\\OneDrive\\.gemini\\antigravity\\brain\\0d1f5f7f-6716-4fd0-93c6-a85abf1e344a\\implementation_plan.md)"
+      ]
+    }
+  },
+  "settings": {
+    "fileAccessPolicy": "AGENT_SETTING_POLICY_ASK",
+    "internetPolicy": "AGENT_SETTING_POLICY_ASK",
+    "autoExecutionPolicy": "CASCADE_COMMANDS_AUTO_EXECUTION_OFF",
+    "artifactReviewMode": "ARTIFACT_REVIEW_MODE_ALWAYS"
+  },
+  "updatedAt": "2026-08-05T04:24:07.330716Z"
+}
