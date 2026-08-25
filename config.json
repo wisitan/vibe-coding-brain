@@ -1,4 +1,21 @@
 {
+  "plugins": {
+    "android-cli-plugin": {
+      "enabled": true
+    },
+    "chrome-devtools-plugin": {
+      "enabled": true
+    },
+    "firebase": {
+      "enabled": true
+    },
+    "google-antigravity-sdk": {
+      "enabled": true
+    },
+    "modern-web-guidance-plugin": {
+      "enabled": true
+    }
+  },
   "userSettings": {
     "browserJsExecutionPolicy": "BROWSER_JS_EXECUTION_POLICY_TURBO",
     "customThemeSeedsDark": {
@@ -7,9 +24,9 @@
       "primary": "#007acc"
     },
     "customThemeSeedsLight": {
-      "background": "#FDF6E3",
-      "foregroundOverride": "#586E75",
-      "primary": "#CB4B16"
+      "background": "#EEEEEE",
+      "foregroundOverride": "#101010",
+      "primary": "#007acc"
     },
     "globalPermissionGrants": {
       "allow": [
@@ -287,7 +304,70 @@
         "write_file(E:\\OneDrive\\.gemini\\config\\rules\\global-coding-standards.md)",
         "write_file(E:\\OneDrive\\.gemini\\config\\templates\\ADR_TEMPLATE.md)",
         "write_file(E:\\OneDrive\\.gemini\\config\\skills\\project-bootstrap\\SKILL.md)",
-        "command(git init; git remote add origin https://github.com/wisitan/vibe-coding-brain.git; git add -A; git commit -m \"feat: initial commit of Master Brain rules, skills, and templates\"; git push -u origin master)"
+        "command(git init; git remote add origin https://github.com/wisitan/vibe-coding-brain.git; git add -A; git commit -m \"feat: initial commit of Master Brain rules, skills, and templates\"; git push -u origin master)",
+        "command(git add -A; git commit -m \"refactor: move workflows to global Master Brain\"; git push origin main)",
+        "command(git config user.email \"bot@antigravity.local\"; git config user.name \"Antigravity\"; git commit -m \"feat: initial commit of Master Brain rules, skills, and templates\"; git branch -M main; git push -u origin main)",
+        "command(powershell -Command \"Select-String -Path 'E:\\OneDrive\\Projects\\Website Dev\\Dental Clinic\\index.html' -Pattern 'line'\")",
+        "command(git add index.html; git commit -m \"feat: update real LINE OA link to https://lin.ee/17ZlFPL\"; git push origin main)",
+        "command(python3 -c \"import urllib.request; html = urllib.request.urlopen('https://www.khunmorfun.com').read().decode('utf-8'); print('has_line_link:', 'https://lin.ee/17ZlFPL' in html)\")",
+        "command(python3 -c \"import urllib.request; req = urllib.request.Request('https://maps.app.goo.gl/qTEJr9Nva8rh33kN6', headers={'User-Agent':'Mozilla/5.0'}); res = urllib.request.urlopen(req); print('Final URL:', res.geturl())\")",
+        "command(python3 -c \"import urllib.request; url = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.148!2d100.7235632!3d13.7655431!2m3!1f0!2f0!3f0!2m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6725c4ec51b3%3A0x7a9f47b4f409e308!2s%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%9F%E0%B8%B1%E0%B8%99%20Dental%20House!5e0!3m2!1sth!2sth'; req = urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0'}); print('Status:', urllib.request.urlopen(req).getcode())\")",
+        "command(git add index.html; git commit -m \"fix: update embedded Google Maps iframe src to real clinic location (คุณหมอฟัน Dental House)\"; git push origin main)",
+        "command(python3 -c \"import urllib.request; html = urllib.request.urlopen('https://www.khunmorfun.com').read().decode('utf-8'); print('has_new_map_embed:', '0x311d6725c4ec51b3' in html)\")",
+        "write_file(E:\\OneDrive\\.gemini\\antigravity\\brain\\bad7dd90-0858-49bf-81ac-98e7b15222e8\\service_details_review.md)",
+        "read_file(E:\\OneDrive\\Projects\\Website Dev\\Dental Clinic\\script.js)",
+        "read_file(E:\\OneDrive\\Projects\\Website Dev\\Dental Clinic\\Asset)",
+        "write_file(E:\\OneDrive\\Projects\\Website Dev\\Dental Clinic\\script.js)",
+        "command(git add index.html script.js styles.css \u0026\u0026 git commit -m \"Add Model A Service Details Modal and expandable price rows\" \u0026\u0026 git push origin main)",
+        "command(git add index.html script.js styles.css)",
+        "command(git commit -m \"Add Model A Service Details Modal and expandable price rows\")",
+        "command(Copy-Item \"C:\\Users\\conta\\.gemini\\antigravity\\brain\\bad7dd90-0858-49bf-81ac-98e7b15222e8\\service_general_1786613117554.jpg\" -Destination \"E:\\OneDrive\\Projects\\Website Dev\\Dental Clinic\\Asset\\service_general.jpg\")",
+        "command(git add .)",
+        "command(git commit -m \"Fix Modal A positioning to center screen, enable full touch scrollability, remove info button badge, add 3D medical dental image\")",
+        "command(git commit -m \"Update service details modal images to match user uploaded service photos\")",
+        "command(git commit -m \"Fix modal image flash delay with preloading and instant src reset, and update RPD denture image\")",
+        "command(Select-String -Path \"index.html\" -Pattern \"facebook\")",
+        "command(git add index.html)",
+        "command(git commit -m \"Update Facebook links to official clinic Facebook page\")",
+        "command(git commit -m \"Remove designer credit from footer\")",
+        "command(git commit -m \"Add smooth scroll reveal animations for sections below hero section\")",
+        "read_file(E:\\OneDrive\\.gemini\\antigravity\\brain\\bad7dd90-0858-49bf-81ac-98e7b15222e8\\service_general_1786613117554.jpg)",
+        "read_file(E:\\OneDrive\\.gemini\\antigravity\\brain\\bad7dd90-0858-49bf-81ac-98e7b15222e8\\.user_uploaded\\media_1786610794203.png)",
+        "command(git commit -m \"Add category thumbnail images to service cards matching user mock layout\")",
+        "command(Get-ChildItem -Path \"C:\\Users\\conta\\AppData\\Roaming\\Pinokio\" -Force)",
+        "command(docker images)",
+        "command(Get-ChildItem -Path \"C:\\n8n\", \"D:\\n8n-data\" -ErrorAction SilentlyContinue)",
+        "command(Get-Command python -ErrorAction SilentlyContinue | Select-Object Source; pip list 2\u003e$null | Select-String -Pattern \"torch|llama|transformers|diffusers|whisper|ollama|langchain\")",
+        "command(git commit -m \"Add Real Patient Before-After Review Cases section with video modal and add detail badges to price table\")",
+        "read_file(E:\\OneDrive\\Projects\\Website Dev\\Dental Clinic)",
+        "command(Select-String -Path \"index.html\", \"script.js\" -Pattern \"lin.ee\")",
+        "command(Select-String -Path \"index.html\", \"script.js\" -Pattern \"line\\.me\")",
+        "command(git commit -m \"Update LINE contact links to https://line.me/ti/p/DccHtQDJAk\")",
+        "command(git commit -m \"Optimize Local SEO for Romklao-Lat Krabang with Meta Tags, Open Graph, and Schema.org Dentist Structured Data\")",
+        "command(Select-String -Path \"index.html\" -Pattern \"ร่มเกล้า\")",
+        "command(Select-String -Path \"index.html\" -Pattern \"ที่ตั้งคลินิก\" -Context 0, 5)",
+        "command(git commit -m \"Update exact clinic address: อาคารนลินซิตี้ 78/12 10 ถนนเคหะร่มเกล้า, แขวงคลองสองต้นนุ่น, เขตลาดกระบัง\")",
+        "read_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/Projects/Affiliate_Automation/.agents)",
+        "read_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/.gemini)",
+        "read_url(github.com)",
+        "read_url(raw.githubusercontent.com)",
+        "read_url(tamsub.com)",
+        "unsandboxed(cp)",
+        "read_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/Projects/Shared_Assets/Thai_Caption_Studio_App)",
+        "read_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/Projects/Shared_Assets/AI_Transcription_FCPXML)",
+        "read_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/Projects/Vibe coding)",
+        "unsandboxed(echo)",
+        "unsandboxed(ls)",
+        "unsandboxed(cd)",
+        "write_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/.gemini/antigravity/brain/6565a766-16f2-4b70-8c3f-2515d844d240/implementation_plan.md)",
+        "write_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/.gemini/antigravity/brain/6565a766-16f2-4b70-8c3f-2515d844d240/task.md)",
+        "write_file(/Users/a_am_i/Library/CloudStorage/OneDrive-Personal/.gemini/config/AGENTS.md)",
+        "unsandboxed(mkdir)",
+        "command(git clone)",
+        "unsandboxed(git clone)",
+        "unsandboxed(git commit)",
+        "unsandboxed(git push origin main)",
+        "unsandboxed(rm -f \"$CONFIG_DIR/.git/index.lock\")"
       ]
     },
     "remoteControlHostname": "my-macbook-air-local-vivid-flux",
