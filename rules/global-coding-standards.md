@@ -19,6 +19,10 @@ These rules apply to all projects in this environment:
 *   **DO** remind the user to commit after significant milestones, or execute the commit if permitted.
 *   **DO** write descriptive, conventional commit messages.
 
+## Project Context & Bootstrapping
+*   **DO** ensure every project has an `AGENTS.md` at its root. When starting in a new or uninitialized project directory without `AGENTS.md`, automatically create it with project goals, tech stack, and dev commands.
+
 ## Security Baseline
 *   **NEVER** expose API keys, secrets, or OAuth credentials in source code.
 *   **DO** ensure user inputs are sanitized before rendering into the DOM to prevent XSS.
+
