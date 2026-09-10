@@ -18,6 +18,7 @@ These rules apply to all projects in this environment:
 ## Git Workflow
 *   **DO** remind the user to commit after significant milestones, or execute the commit if permitted.
 *   **DO** write descriptive, conventional commit messages.
+*   **DO** automatically commit and push any changes made to the master brain (`vibe-coding-brain`, `GEMINI.md`, global rules, skills, templates) to keep all devices in sync.
 
 ## Project Context & Bootstrapping
 *   **DO** ensure every project has an `AGENTS.md` at its root. When starting in a new or uninitialized project directory without `AGENTS.md`, automatically create it with project goals, tech stack, and dev commands.
