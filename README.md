@@ -4,13 +4,26 @@ Master repository for Sunday (Coding Agent) & พี่เอ (Wisit) — Centra
 
 ---
 
+## 📋 Daily Workflow Cheat Sheet
+
+| สถานการณ์ | เรียกใช้คำสั่ง | สิ่งที่ระบบทำ |
+| :--- | :--- | :--- |
+| 💡 **ปรึกษาไอเดียธุรกิจ / คิดหัวข้อคอนเทนต์** | `/grill-me` | สัมภาษณ์เจาะลึกเพื่อตกผลึกไอเดีย ไม่สร้างไฟล์ (Stateless) |
+| 📐 **เริ่มวางระบบใหม่ / ล็อกนิยามศัพท์** | `/grill-with-docs` | สัมภาษณ์สถาปัตยกรรม + บันทึก `CONTEXT.md` (Glossary) และ ADR ลงเครื่องทันที (Stateful) |
+| 🔨 **ลงมือสร้างฟังก์ชันใหม่ / ทำงานตามบรีฟ** | `/new-feature` | Pipeline 7 ขั้นตอน (วางแผน ➔ เช็กเสี่ยง ➔ เขียนโค้ด ➔ เทส ➔ Commit) รองรับทั้งบรีฟตรงและหยิบตั๋วงาน |
+| 🧩 **โปรเจกต์ใหญ่ อยากซอยเป็นงานย่อย** | `/to-tickets` | ซอยระบบเป็น Tracer-Bullet Vertical Slices พอดี 1 Context Window พร้อมเช็ก Blocking |
+| 🔍 **ตรวจความเรียบร้อยก่อนส่งมอบ** | `/code-review` | ตรวจสอบ 2 แกนคู่ขนาน: Standards & Code Smells vs Spec & Requirements Fidelity |
+| 🐛 **แก้บั๊กที่ไม่คาดคิด** | `/bug-fix` | ตรวจหาสาเหตุรากเหง้า ➔ แก้ไขเฉพาะจุด ➔ เทส ➔ Commit |
+
+---
+
 ## 📂 Repository Structure
 
 * `GEMINI.md`: Persona of Sunday, Thai language communication rules, Sweet Spot QA Triage, and Wisit's personal context.
 * `AGENTS.md`: Pair programming guidelines & QA Subagent operational rules.
 * `rules/`: Global coding standards applied across all projects (`global-coding-standards.md`).
-* `skills/`: Reusable procedural runbooks (`new-feature`, `bug-fix`, `code-review`, `webapp-builder`, `responsive-ui-guidelines`, `project-bootstrap`).
-* `templates/`: Templates for project-level `AGENTS.md` and `ADR.md`.
+* `skills/`: Reusable procedural runbooks (`grill-me`, `grill-with-docs`, `to-tickets`, `new-feature`, `code-review`, `bug-fix`, `webapp-builder`, `responsive-ui-guidelines`, `project-bootstrap`).
+* `templates/`: Templates for project-level `AGENTS.md`, `ADR_TEMPLATE.md`, and `CONTEXT_TEMPLATE.md`.
 * `setup-mac.sh`: 1-Click setup script for macOS.
 * `setup-pc.bat`: 1-Click setup script for Windows.
 
@@ -40,6 +53,6 @@ Master repository for Sunday (Coding Agent) & พี่เอ (Wisit) — Centra
 ## 🔄 Daily Sync Workflow
 
 * **When updating rules/skills:**
-  * Run `git add . && git commit -m "update message" && git push`
+  * Auto-committed and pushed to GitHub automatically by Sunday.
 * **On other devices:**
   * Run `git pull` in the `vibe-coding-brain` folder.

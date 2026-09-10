@@ -1,39 +1,53 @@
 ---
 name: code-review
 description: >-
-  Use this skill when the user types "/code-review" or asks to review current changes.
-  This skill performs a comprehensive code review against project guidelines without modifying any code,
-  and returns the findings grouped by priority (P0, P1, P2).
+  Use when the user types "/code-review" or asks to review code, PRs, or recent changes.
+  Performs a comprehensive Two-Axis review evaluating (1) Standards & Code Health and (2) Spec & Requirements Fidelity.
 ---
 
-# Code Review Workflow
+# Code Review Workflow (Two-Axis Review)
 
-When the user triggers this skill (e.g., by typing `/code-review`), you MUST perform a comprehensive review of their current uncommitted changes or recent code modifications.
+When triggered (e.g. `/code-review` or `/code-review since HEAD~1`), perform a thorough read-only audit across two independent axes so that clean code does not mask missing requirements, and functional code does not mask technical debt.
 
 ## Rules of Engagement
-*   **DO NOT modify any code.** This is a read-only audit.
-*   **DO NOT execute commands that alter state.**
+*   **Read-only:** DO NOT modify any code or files during review.
+*   **Diff-based:** Inspect `git diff` against HEAD, merge-base, or specified commit.
 
-## Review Criteria
-Analyze the changes against the following aspects, referring to the project's `.agents/rules` when applicable:
+## Axis 1: Standards & Code Health
+Evaluate code craftsmanship against repo standards and baseline code smells:
+1. **Repository Standards:** Does it follow `rules/global-coding-standards.md`, `AGENTS.md`, and project architecture rules?
+2. **Security Baseline:** No exposed secrets, no unsanitized user inputs (XSS prevention).
+3. **Martin Fowler Code Smells:**
+   - *Mysterious Name:* Variables/functions whose names do not reveal intent.
+   - *Duplicated Code:* Same logic repeated across hunks.
+   - *Feature Envy:* A function reaching into another object's data more than its own.
+   - *Primitive Obsession:* Using raw strings/numbers instead of proper domain models.
+   - *Shotgun Surgery:* One small change forcing edits scattered across too many files.
 
-1.  **Architecture**: Does it adhere to the Vanilla JS/Store Singleton patterns? Does it violate boundaries?
-2.  **Bugs**: Are there logical errors, syntax errors, or unhandled exceptions?
-3.  **Regression Risk**: Could this change break existing features (e.g., routing, data loading)?
-4.  **Security**: Are there XSS vulnerabilities (e.g., unsafe `innerHTML` usage)? Are credentials exposed?
-5.  **Performance**: Are there potential memory leaks, excessive re-renders, or synchronous bottlenecks?
-6.  **Responsive UI**: Will it break on mobile? Does it use the correct CSS variables and media queries?
-7.  **Google Drive sync**: Are timestamps (`updatedAt`) updated correctly? Are tombstones created upon deletion?
-8.  **Maintainability**: Is the code overly complex? Should a large function be split?
+## Axis 2: Spec & Requirements Fidelity
+Evaluate alignment against the originating user prompt, spec, or ticket:
+1. **Missing Requirements:** Are there features, validations, or edge cases asked for that were missed?
+2. **Scope Creep:** Was code or complexity added that was NOT requested? (Speculative generality)
+3. **Fidelity:** Did the implementation match the expected user behavior?
 
 ## Return Format
-Format your response exactly using the following priority groups. If there are no issues for a particular priority, state "None found."
 
-### P0 Critical
-*Immediate blockers. Bugs, security vulnerabilities, or severe architectural violations (like bypassing the data store or breaking Drive sync).*
+Format findings cleanly by priority:
 
-### P1 Important
-*High-priority improvements. Performance bottlenecks, regression risks, missing timestamps, or UI responsiveness issues.*
+```markdown
+## 🔍 Two-Axis Code Review Report
 
-### P2 Nice to have
-*Suggestions for better maintainability, code cleanliness, or minor optimizations.*
+### 📐 Axis 1: Standards & Code Health
+- **P0 Critical:** <Immediate bugs, security leaks, severe violations or "None">
+- **P1 Important:** <Code smells, responsiveness flaws, or maintainability issues>
+- **P2 Nice to have:** <Minor style polish, naming improvements>
+
+### 🎯 Axis 2: Spec & Requirements Fidelity
+- **P0 Missing Requirements:** <Items from the brief that were omitted or "None">
+- **P1 Scope Creep / Deviations:** <Unnecessary additions or behavioral mismatch>
+- **P2 Edge Case Enhancements:** <Recommended edge cases to cover>
+
+### 📊 Final Verdict
+- **Status:** [Approved / Needs Changes]
+- **Summary:** One-line bottom-line recommendation.
+```
